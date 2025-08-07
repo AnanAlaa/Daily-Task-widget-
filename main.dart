@@ -16,7 +16,6 @@ class TaskApp extends StatelessWidget {
   }
 }
 
-// الشاشة الرئيسية
 class TaskScreen extends StatelessWidget {
   const TaskScreen({super.key});
 
@@ -42,15 +41,15 @@ class TaskScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: const [
-            // شريط البحث
+            
             SearchBar(),
 
             SizedBox(height: 20),
 
-            // كارت التحديات اليومية
+            
             DailyChallengeCard(),
 
-            // كارت المهام لمرة واحدة
+          
             OneTimeCard(),
           ],
         ),
@@ -92,7 +91,6 @@ class SearchBar extends StatelessWidget {
   }
 }
 
-// الودجت العامة القابلة لإعادة الاستخدام
 class TaskCard extends StatelessWidget {
   final String title;
   final String subtitle;
@@ -119,7 +117,6 @@ class TaskCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // عدد المهام
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
@@ -133,7 +130,7 @@ class TaskCard extends StatelessWidget {
           ),
           const SizedBox(width: 16),
 
-          // العنوان والوصف
+          
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -151,8 +148,6 @@ class TaskCard extends StatelessWidget {
               ],
             ),
           ),
-
-          // الأيقونة
           Icon(
             icon,
             size: 50,
@@ -163,8 +158,6 @@ class TaskCard extends StatelessWidget {
     );
   }
 }
-
-// ودجت التحديات اليومية
 class DailyChallengeCard extends StatelessWidget {
   const DailyChallengeCard({super.key});
 
@@ -174,12 +167,10 @@ class DailyChallengeCard extends StatelessWidget {
       title: 'Daily Challenges',
       subtitle: 'Complete your daily tasks to earn more coins.',
       count: 9,
-      icon: Icons.pets, // أو أيقونة أخرى تعجبك
+      icon: Icons.pets, 
     );
   }
 }
-
-// ودجت المهام لمرة واحدة
 class OneTimeCard extends StatelessWidget {
   const OneTimeCard({super.key});
 
@@ -189,7 +180,8 @@ class OneTimeCard extends StatelessWidget {
       title: 'One Time',
       subtitle: 'One-time tasks can be completed for extra coins.',
       count: 4,
-      icon: Icons.volunteer_activism, // أيقونة مناسبة للتشجيع
+      icon: Icons.volunteer_activism, 
     );
   }
+
 }
